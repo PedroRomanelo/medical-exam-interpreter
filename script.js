@@ -17,3 +17,27 @@ function showSlide(slideIndex) {
     dots[slideIndex].classList.add('active');
   }
   
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    
+    menuToggle.addEventListener('click', function() {
+      menu.classList.toggle('active');
+    });
+
+    // Fechar o menu ao clicar fora dele
+    document.addEventListener('click', function(event) {
+      if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+
+    // Fechar o menu ao clicar em um botão
+    const menuButtons = menu.querySelectorAll('button');
+    menuButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        menu.classList.remove('active');
+      });
+    });
+  });
