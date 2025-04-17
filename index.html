@@ -43,24 +43,43 @@
   </div>
   
 
-  <main class="container">
+  <div class="container">
     <div class="conteudo">
       <div class="imagem">
         <img src="medico.png" alt="Imagem dos exames laboratoriais">
       </div>
       <div class="texto">
         <p>
-            <span class="titulo-principal">Inteligência Artificial a serviço da sua saúde</span>
-            Nossa plataforma foi desenvolvida para oferecer mais praticidade, segurança e orientação personalizada no acesso aos seus exames laboratoriais. Ao receber os resultados, uma inteligência artificial realiza uma análise preliminar dos dados e classifica automaticamente o grau de prioridade em três níveis: Informativo, Moderado ou Crítico.
-            
-            Casos classificados como Críticos passam por uma segunda análise feita por um biomédico antes de qualquer encaminhamento. A IA envia notificações automáticas com orientações iniciais e indica qual especialista deve ser procurado. Em situações de risco, o sistema pode acionar emergências graças à integração com redes hospitalares.
-            
-            Essa funcionalidade não substitui a avaliação médica, mas complementa o cuidado, incentivando o acompanhamento clínico e facilitando o acesso ao atendimento ideal.
+          <span class="titulo-principal">Inteligência Artificial a serviço da sua saúde</span>
+          Nossa plataforma foi desenvolvida para oferecer mais praticidade, segurança e orientação personalizada no acesso aos seus exames laboratoriais. Ao receber os resultados, uma inteligência artificial realiza uma análise preliminar dos dados e classifica automaticamente o grau de prioridade em três níveis: Informativo, Moderado ou Crítico.
         </p>
+        
+        <div class="buttons-container">
+          <button class="classification-button informativo" data-type="informativo">Informativo</button>
+          <button class="classification-button moderado" data-type="moderado">Moderado</button>
+          <button class="classification-button critico" data-type="critico">Crítico</button>
+        </div>
+        
+        <div class="classification-info info-informativo" id="info-informativo">
+          <h3>Classificação: Informativo</h3>
+          <p>Essa classificação indica que os resultados dos seus exames estão dentro dos padrões esperados, sem alterações significativas. Nenhuma anormalidade foi identificada, e não há indícios de problemas imediatos.</p>
+          <p><span class="alert-icon">⚠️</span> Ainda assim, é fundamental retornar ao médico ou procurar um especialista para uma análise completa dos resultados.</p>
+        </div>
+        
+        <div class="classification-info info-moderado" id="info-moderado">
+          <h3>Classificação: Moderado</h3>
+          <p>Resultados com essa classificação apresentam pequenas alterações que, embora não graves, merecem atenção. Pode ser necessário um acompanhamento simples, mudanças em hábitos ou exames complementares.</p>
+          <p><span class="alert-icon">⚠️</span> Ainda assim, é fundamental retornar ao médico ou procurar um especialista para uma análise completa dos resultados.</p>
+        </div>
+        
+        <div class="classification-info info-critico" id="info-critico">
+          <h3>Classificação: Crítico</h3>
+          <p>Essa classificação aponta alterações importantes nos seus exames, que podem indicar uma condição de saúde que requer investigação imediata. É um sinal de alerta para buscar orientação o quanto antes.</p>
+          <p><span class="alert-icon">⚠️</span> Ainda assim, é fundamental retornar ao médico ou procurar um especialista para uma análise completa dos resultados.</p>
+        </div>
+      </div>
     </div>
-    
-    </div>
-  </main>
+  </div>
   
 
   <main class="container2">
@@ -169,7 +188,7 @@
           <ul>
             <li>Tomar decisões clínicas assertivas;</li>
             <li>Prescrever medicamentos adequados;</li>
-            <li>Definir necessidade de internação ou alta;</li> <strong>e</strong>
+            <li>Definir necessidade de internação ou alta;</li>
             <li>Escolher a melhor estratégia terapêutica.</li>
           </ul>
       <p>“Cerca de <strong>70%</strong> dos diagnósticos médicos <strong>são concluídos a partir de exames laboratoriais</strong>” (FONTE: RBAC - 2022).</p>  

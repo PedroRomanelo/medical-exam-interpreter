@@ -177,3 +177,41 @@ document.addEventListener('DOMContentLoaded', function () {
   // Inicia a alteração automática dos slides
   startAutoSlides();
 });
+
+
+//--------------
+
+document.addEventListener('DOMContentLoaded', function() {
+  const classificationButtons = document.querySelectorAll('.classification-button');
+  const infoBoxes = document.querySelectorAll('.classification-info');
+  
+  // Função para ocultar todas as caixas de informação
+  function hideAllInfoBoxes() {
+    infoBoxes.forEach(box => {
+      box.style.display = 'none';
+    });
+    
+    // Remove a classe active de todos os botões
+    classificationButtons.forEach(button => {
+      button.classList.remove('active');
+    });
+  }
+  
+  // Adiciona o evento de clique a cada botão
+  classificationButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const type = this.getAttribute('data-type');
+      const infoBox = document.getElementById('info-' + type);
+      
+      // Se o botão já estiver ativo, oculta a caixa de informação
+      if (this.classList.contains('active')) {
+        hideAllInfoBoxes();
+      } else {
+        // Caso contrário, oculta todas as caixas e exibe a selecionada
+        hideAllInfoBoxes();
+        infoBox.style.display = 'block';
+        this.classList.add('active');
+      }
+    });
+  });
+});
