@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB.IA - Soluções e Custos</title>
+    <style>
+        :root {
+            --primary-color: #2c5234;
+            --secondary-color: #4a7c2e;
+            --light-green: #f0f7e6;
+            --highlight: #83a64b;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+         .logo-image img {
+            max-width: 100px;
+            height: auto;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1, h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-intro {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-table th {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .pricing-table td {
+            padding: 1rem;
+            text-align: center;
+            background-color: var(--light-green);
+            border: 1px solid #ddd;
+        }
+        
+        .check, .x-mark {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .check {
+            color: green;
+        }
+        
+        .x-mark {
+            color: red;
+        }
+        
+        .pricing-footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--light-green);
+            border-radius: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-text">LAB.IA</div>
+        </div>
+        <div class="logo-image">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </header>
+    
+    <main>
+        <h1>Soluções de Inteligência Artificial para Laboratórios</h1>
+        
+        <div class="pricing-intro">
+            <p>Transforme seu laboratório com nossas soluções avançadas de inteligência artificial. Nossa plataforma LAB.IA oferece automação, integração e análise inteligente para otimizar seus processos laboratoriais.</p>
+        </div>
+        
+        <h2>Tabela de Custos</h2>
+        
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>AÇÃO</th>
+                    <th>VALOR</th>
+                    <th>PERÍODO</th>
+                    <th>CLIENTE</th>
+                    <th>NOSSA EMPRESA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DESENVOLVIMENTO E APLICAÇÃO DA IA</td>
+                    <td>R$ 50.000 - R$ 150.000</td>
+                    <td>UMA VEZ</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                    <td>INFRAESTRUTURA NA NUVEM</td>
+                    <td>R$ 10.000 - R$ 50.000</td>
+                    <td>ANUAL</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="x-mark">✗</span></td>
+                </tr>
+                <tr>
+                    <td>AJUSTES</td>
+                    <td>R$ 20.000 - R$ 80.000</td>
+                    <td>ANUAL</td>
+                    <td><span class="x-mark">✗</span></td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                    <td>EQUIPE</td>
+                    <td>R$ 5.000 - R$ 20.000</td>
+                    <td>MENSAL</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                    <td>INTEGRAÇÃO COM SISTEMA JÁ ATIVO</td>
+                    <td>R$ 30.000 - R$ 80.000</td>
+                    <td>UMA VEZ</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="x-mark">✗</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pricing-footer">
+            APLICAÇÃO, INTEGRAÇÃO E FUNCIONAMENTO DO SISTEMA POR LABORATÓRIO ATIVO:<br>
+            R$ 300 - R$ 500/MÊS + R$ 1,50/EXAME
+        </div>
+        
+        <!--<div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🧪</div>
+                <h3>Automação de Análises</h3>
+                <p>Reduza o tempo de análise com automação inteligente e aumente a precisão dos resultados laboratoriais.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Análise de Dados</h3>
+                <p>Transforme dados brutos em insights valiosos com nossa plataforma de análise avançada.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Integração Completa</h3>
+                <p>Integre facilmente com seus sistemas existentes para um fluxo de trabalho contínuo e eficiente.</p>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Pronto para Transformar seu Laboratório?</h2>
+            <p>Entre em contato conosco hoje para uma demonstração personalizada de como o LAB.IA pode revolucionar seus processos laboratoriais.</p>
+            <a href="#contato" class="cta-button">Solicitar Demonstração</a>
+        </div>-->
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 LAB.IA - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
